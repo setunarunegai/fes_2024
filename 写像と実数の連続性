@@ -1,6 +1,6 @@
 \documentclass[dvipdfmx]{jsarticle}
 \title{写像と実数の連続性}
-\author{野田桜子}
+\author{野田\quad 桜子}
 \date{}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -39,14 +39,14 @@ $\forall x,y,z \in X$に対して,
   \item[(3)] $d(x,y) \leqq d(x,z)+d(z,y)$ (三角不等式)
 \end{enumerate}
 このとき, $d$を$X$上の\textbf{距離関数}, 
-集合$X$と写像$d$の対$(X,d)$を\textbf{距離空間}, $X$の元(要素)を\textbf{点}, $d(x,y)$を２点$x,y$の\textbf{距離}という.
+集合$X$と写像$d$の対$(X,d)$を\textbf{距離空間}, $X$の元(要素)を\textbf{点}, $d(x,y)$を２点$x,y$の\textbf{距離}という. 
 \end{definition}
 
-\begin{definition}(写像の連続性）
+\begin{definition}(連続写像）
 
 $(X,d_X), (Y,d_Y)$を距離空間とする.\\
 $\text{写像} f : (X,d_X) \to (Y,d_Y) \text{ が点 } a\in X$ \textbf{ において連続} \\      $\stackrel{\mathrm{def}}{\Leftrightarrow} \forall \varepsilon > 0, \exists \delta > 0, \forall x \in X, d_X(x,a) < \delta \implies d_Y(f(x),f(a)) < \varepsilon$\\
-$f$を$(X,d_X)$から$(Y,d_Y)$への\textbf{連続写像}である
+$f$が$(X,d_X)$から$(Y,d_Y)$への\textbf{連続写像}である
 $\stackrel{\mathrm{def}}{\Leftrightarrow}$
 $f$が$\forall a \in X$において連続
 \end{definition}
@@ -54,8 +54,9 @@ $f$が$\forall a \in X$において連続
 $\forall$は任意の, $\exists$は存在するという意味であるので, これは任意の正の数$\varepsilon$に対し, $x$と$a$の距離が$\delta$未満であれば必ず$f(x)$と$f(a)$の距離を$\varepsilon$未満に出来る,  正の数$\delta$が存在すると表している. 高校時代で使う言葉を用いれば, $x$が$a$に限りなく近づけば, $f(x)$も$f(a)$に限りなく近づくということである. 
 
 開集合や閉集合を用いて, この定義と同値な表現が出来ることを以下に示したい.
-\begin{theorem}\label{set_continue}
-以下三つは同値である.
+\begin{theorem}\label{set_continue} 
+
+写像$f:(X,d_X) \to (Y,d_Y)$において, 以下三つは同値である. 
 \begin{enumerate}
   \item[(1)] $f$は連続写像である.
   \item[(2)] $V$を$Y$の開集合とすると, $f^{-1}(V)$は$X$の開集合となる.
@@ -63,10 +64,10 @@ $\forall$は任意の, $\exists$は存在するという意味であるので, �
 \end{enumerate}
 \end{theorem}
 
-\begin{definition}(内部・閉包・補集合)
+\begin{definition}(開球体・内部・閉包・補集合)
 
   距離空間$(X,d_X)$に対し, $a \in X, r>0$, $S$を$X$の部分集合とするとき,\\
-  $a$を\textbf{中心}, $r$を\textbf{半径}とする\textbf{開球体}$B(a,r) \stackrel{\mathrm{def}}{=} \{x \in X ; d_X(a,x)<r\}$\\
+  $a$を中心, $r$を半径とする\textbf{開球体}$B(a,r) \stackrel{\mathrm{def}}{=} \{x \in X ; d_X(a,x)<r\}$\\
   $S$の\textbf{内部}$S^o \stackrel{\mathrm{def}}{=} \{x \in X ; \exists \varepsilon>0, B(x,\varepsilon) \subset S\}$\\
   $S$の\textbf{閉包}$\overline{S} \stackrel{\mathrm{def}}{=} \{x \in X ; \forall \varepsilon>0, B(x,\varepsilon) \cap S \ne \varnothing \}$\\
   $S$の\textbf{補集合}$S^c \stackrel{\mathrm{def}}{=} \{x \in X ; x \notin S\}  $
@@ -78,14 +79,14 @@ $\forall$は任意の, $\exists$は存在するという意味であるので, �
   $\stackrel{\mathrm{def}}{\Leftrightarrow}$
   $V \subset Y$かつ$V=V^o$
 
-  $A$が$Y$の\textbf{閉集合}である$\stackrel{\mathrm{def}}{\Leftrightarrow}$ $V \subset Y$かつ$V=\overline{V}$
+  $V$が$Y$の\textbf{閉集合}である$\stackrel{\mathrm{def}}{\Leftrightarrow}$ $V \subset Y$かつ$V=\overline{V}$
 \end{definition}
 
 \begin{theorem}\label{interior}
-以下二つは同値である.
+写像$f:(X,d_X) \to (Y,d_Y)$, $a \in X$において, 以下二つは同値である.
 \begin{enumerate} 
   \item[(1)] $f$が$a$において連続である.
-  \item[(2)] $V(\subset Y)$が$f(a)$に内点をもつとき, $f^{-1}(V)$は$a$を内点にもつ.
+  \item[(2)] $V(\subset Y)$が$f(a)$を内点にもつとき, $f^{-1}(V)$は$a$を内点にもつ.
 \end{enumerate}
 \end{theorem}
 \begin{definition}(内点)
@@ -102,7 +103,7 @@ $\exists \varepsilon >0, B(a,\varepsilon) \subset X$
 \end{proof}
 
 \begin{proof}(Theorem : \ref{interior})\\
-  (1) %この同値記号をそろえたい
+  (1)
   $\iff$
   [$\forall \varepsilon > 0, \exists \delta > 0, \forall x \in X, d_X(a,x)< \delta \implies d_Y(f(a),f(x)) < \varepsilon$]
   
@@ -114,19 +115,19 @@ $\exists \varepsilon >0, B(a,\varepsilon) \subset X$
 
   (2)
   $\iff$
-  [$\exists \varepsilon_1 > 0,B_Y(f(a),\varepsilon_1) \subset V
+  [$\exists \varepsilon_1 > 0, B_Y(f(a),\varepsilon_1) \subset V
   \implies
-  \exists \varepsilon_2 > 0,B_X(a,\varepsilon_2) \subset f^{-1}(V)$] が成立する. 
+  \exists \varepsilon_2 > 0, B_X(a,\varepsilon_2) \subset f^{-1}(V)$] が成立する. 
   
   (1)$\implies$(2)を示す.
   
-  $\exists \varepsilon_1 > 0,B_Y(f(a),\varepsilon_1) \subset V$
+  $\exists \varepsilon_1 > 0, B_Y(f(a),\varepsilon_1) \subset V$
 
   $\implies
-  \exists \varepsilon_1 > 0,f^{-1}(B_Y(f(a),\varepsilon_1))\subset f^{-1}(V)$ $(\because \text{Theorem : }\ref{func_subset})$
+  \exists \varepsilon_1 > 0, f^{-1}(B_Y(f(a),\varepsilon_1))\subset f^{-1}(V)$ $(\because \text{Theorem : }\ref{func_subset})$
 
   $\implies
-  \exists \varepsilon_1 > 0, \exists \delta >0,B_X(a,\delta) \subset f^{-1}(B_Y(f(a),\varepsilon_1))
+  \exists \varepsilon_1 > 0, \exists \delta >0, B_X(a,\delta) \subset f^{-1}(B_Y(f(a),\varepsilon_1))
   \subset f^{-1}(V) (\because (1))$
 
   $\implies
@@ -155,16 +156,20 @@ $\exists \varepsilon >0, B(a,\varepsilon) \subset X$
   \iff \forall \varepsilon >0, B_X(x,\varepsilon) \setminus S^c \ne \varnothing\\
   \iff \forall \varepsilon >0, B_X(x,\varepsilon) \cap S \ne \varnothing\\
   \iff x \in \overline{S}$\\
-  これより,\\
+  これより, \\
   $S$が閉集合\\
   $\iff \overline{S}=S\\
   \iff S^{coc}=S\\
   \iff S^{co}=S^c\\
   \iff S^c$は開集合\\
-  よって閉集合の補集合は開集合であり,かつ$(S^c)^c=S$より開集合の補集合が閉集合であることも示された.
+  よって閉集合の補集合は開集合であり, かつ$(S^c)^c=S$より開集合の補集合が閉集合であることも示された.
 \end{proof}
 
 \begin{proof}(Theorem : \ref{set_continue})
+
+Theorem : \ref{set_continue}の再掲
+
+写像$f:(X,d_X) \to (Y,d_Y)$において, 以下三つは同値である.
 \begin{enumerate}
   \item[(1)] $f$は連続写像である.
   \item[(2)] $V$を$Y$の開集合とすると, $f^{-1}(V)$は$X$の開集合となる.
@@ -173,31 +178,31 @@ $\exists \varepsilon >0, B(a,\varepsilon) \subset X$
 
   (1)$\implies$(2)を示す.
   
-  $V$を$Y$の開集合とする.任意に$a \in f^{-1}(V)$をとる.$f(a) \in V $が成立し$V$は開集合なので, $f(a)$は$V$の内点である. $a$において連続なのでTheorem : \ref{interior}より, $a$は$f^{-1}(V)$の内点である. よって$a$を$f^{-1}(V)$から任意にとったので$f^{-1}(V)$は開集合となる. $f^{-1}(V) \subset X$より, (2)が示された. 
+  $V$を$Y$の開集合とする. 任意に$a \in f^{-1}(V)$をとる. $f(a) \in V $が成立し$V$は開集合なので, $f(a)$は$V$の内点である. $a$において連続なのでTheorem : \ref{interior}より, $a$は$f^{-1}(V)$の内点である. $a$を$f^{-1}(V)$から任意にとったので$f^{-1}(V)$は開集合となる. $f^{-1}(V) \subset X$より, (2)は成立する. 
 
   (2)$\implies$(1)を示す.
 
   任意に$a \in X$をとる. 開球体の定義より$\forall \delta>0, B_Y(f(a),\delta) \subset Y$なので, $f(a)$を内点にもつ$Y$の部分集合は存在する. 
-  $V (\subset Y)$を, $f(a)$を内点にもつ集合とする. このとき, $\exists \varepsilon >0, B_Y(f(a),\varepsilon) \subset V$が成立する. $B_Y(f(a),\varepsilon)$は$V$の開集合なので,仮定より$f^{-1}(B_Y(f(a),\varepsilon))$は$X$の開集合となる. $f^{-1}(B_Y(f(a),\varepsilon))$は$a$を元にもつ開集合なので, $a$を内点にもつ.
-  Theorem : \ref{func_subset}より$f^{-1}(B_Y(f(a),\varepsilon)) \subset f^{-1}(V)$が成立するので, $f^{-1}(V)$は$a$を内点にもつ. Theorem : \ref{interior}より, $f$は$a$において連続である.
+  $V (\subset Y)$を$f(a)$を内点にもつ集合とすると, $\exists \varepsilon >0, B_Y(f(a),\varepsilon) \subset V$が成立する. $B_Y(f(a),\varepsilon)$は$V$の開集合なので, 仮定より$f^{-1}(B_Y(f(a),\varepsilon))$は$X$の開集合となる. $f^{-1}(B_Y(f(a),\varepsilon))$は$a$を元にもつ開集合なので, $a$を内点にもつ.
+  Theorem : \ref{func_subset}より$f^{-1}(B_Y(f(a),\varepsilon)) \subset f^{-1}(V)$が成立するので, $f^{-1}(V)$は$a$を内点にもつ. Theorem : \ref{interior}より, $f$は$a$において連続であるので(1)は成立する.
 
   (2)$\iff$(3)を示す.
 
-  $V$を$Y$の部分集合としたとき,  %ここも改行した方がいいのかな？
+  $V$を$Y$の部分集合としたとき, 
   $x \in f^{-1}(V^c)
   \iff f(x) \in V^c
   \iff f(x) \notin V
   \iff x \notin f^{-1}(V)
   \iff x \in {(f^{-1}(V))}^c$
   より, $f^{-1}(V^c)={(f^{-1}(V))}^c$が成立する. \\
-  $A$を$Y$の閉集合とすると,  Theorem : \ref{kaihei}より$A^c$は$Y$の開集合となる. (2)より$f^{-1}(A^c)$は$X$の開集合となる. $f^{-1}(A^c)={(f^{-1}(A))}^c$より, $f^{-1}(A)$は$X$の閉集合となる.\\
-  同様に$V$を$Y$の開集合とすると, Theorem : \ref{kaihei}より$V^c$は$Y$の閉集合となる. (3)より$f^{-1}(V^c)$は$X$の閉集合となる. $f^{-1}(V^c)={(f^{-1}(V))}^c$より,  $f^{-1}(V)$は$X$の開集合となる. \\
+  $A$を$Y$の閉集合とすると, Theorem : \ref{kaihei}より$A^c$は$Y$の開集合となる. (2)より$f^{-1}(A^c)$は$X$の開集合となる. $f^{-1}(A^c)={(f^{-1}(A))}^c$より, $f^{-1}(A)$は$X$の閉集合となるので(2)$\implies$(3)が成立する.\\
+  同様に$V$を$Y$の開集合とすると, Theorem : \ref{kaihei}より$V^c$は$Y$の閉集合となる. (3)より$f^{-1}(V^c)$は$X$の閉集合となる. $f^{-1}(V^c)={(f^{-1}(V))}^c$より,  $f^{-1}(V)$は$X$の開集合となる. よって(3)$\implies$(2)が成立する. \\
   よって(1), (2), (3)が同値な条件であることが示された.   
 \end{proof}
-よって開集合や閉集合を用いて, 写像の連続性と同値な表現が出来ることを示せた. 
+開集合や閉集合を用いて, 写像の連続性と同値な表現が出来ることを示せた. 
 
 \section{実数の連続性}
-実数の連続性の公理は多様な表現が出来ることを示したい. 以下に実数の連続性の公理を並べた. 他にも同値な表現があり, 紹介しきれていない.
+実数の連続性の公理は多様な表現が出来ることを示したい. 以下に実数の連続性の公理を並べた. 他にも同値な表現が数多く存在する.
 
 \begin{enumerate}
     \item[(W)] 上に有界な集合$A \ne \varnothing$は上限を持つ
@@ -218,23 +223,23 @@ $\exists \varepsilon >0, B(a,\varepsilon) \subset X$
     $m \in \mathbb{R}$が$A(\subset \mathbb{R})$の\textbf{上限}である
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
     $[\forall a \in A , a \leqq m]$かつ
-    [ $\forall x < m,\exists a \in A,x<a$ ]
+    [ $\forall x < m, \exists a \in A, x<a$ ]
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
     $m= \sup A$\\
     $m \in \mathbb{R}$が$A(\subset \mathbb{R})$の\textbf{下限}である
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
     $[\forall a \in A , a \geqq m]$かつ
-    [ $\forall x > m,\exists a \in A,x>a$ ]
+    [ $\forall x > m, \exists a \in A, x>a$ ]
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
     $m = \inf A$\\
     $m \in \mathbb{R}$が実数列$(a_n)$の\textbf{上限}である
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
-    $[\forall n \in \mathbb{N}, a_n \leqq m]$かつ$[\forall x< m, \exists n \in \mathbb{N},x<a_n]$
+    $[\forall n \in \mathbb{N}, a_n \leqq m]$かつ$[\forall x< m, \exists n \in \mathbb{N}, x<a_n]$
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
     $m = \sup a_n$\\
     $m \in \mathbb{R}$が実数列$(a_n)$の\textbf{下限}である
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
-    $[\forall n \in \mathbb{N}, a_n \geqq m]$かつ$[\forall x>m, \exists n \in \mathbb{N},x>a_n]$
+    $[\forall n \in \mathbb{N}, a_n \geqq m]$かつ$[\forall x>m, \exists n \in \mathbb{N}, x>a_n]$
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
     $m = \inf a_n$
 \end{definition}
@@ -247,7 +252,7 @@ $\exists \varepsilon >0, B(a,\varepsilon) \subset X$
     
     数列$(a_n)$は$a$に\textbf{収束}する
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
-    [$\forall \varepsilon>0,\exists N \in \mathbb{N}, n \geqq N \implies |a_n-a|<\varepsilon$]
+    [$\forall \varepsilon>0, \exists N \in \mathbb{N}, n \geqq N \implies |a_n-a|<\varepsilon$]
     $\stackrel{\mathrm{def}}
     {\Leftrightarrow}$
     $ \lim_{n\to \infty} a_n = a$
@@ -280,22 +285,23 @@ $\exists \varepsilon >0, B(a,\varepsilon) \subset X$
 \end{definition}
 
 (K)\textbf{区間縮小法}\\
-数列$(a_n)$が単調増加数列,数列$(b_n)$が単調減少数列であり, $[\forall n \in \mathbb{N},a_n \leqq b_n]$かつ$[\lim_{n\to \infty} (a_n-b_n) = 0]$が成立するとする. このとき$\forall n \in \mathbb{N}, $閉区間$I_n \coloneqq [a_n, b_n]$とすると, $\exists a \in \mathbb{R},\cap_{n \in \mathbb{N}}I_n = \{a\}, \lim_{n\to \infty} a_n = \lim_{n\to \infty} b_n = a$が成立する.
+数列$(a_n)$が単調増加数列, 数列$(b_n)$が単調減少数列であり, $[\forall n \in \mathbb{N}, a_n \leqq b_n]$かつ$[\lim_{n\to \infty} (a_n-b_n) = 0]$が成立するとする. このとき$\forall n \in \mathbb{N}, $閉区間$I_n \coloneqq [a_n, b_n]$とすると, $\exists a \in \mathbb{R}, \cap_{n \in \mathbb{N}}I_n = \{a\}, \lim_{n\to \infty} a_n = \lim_{n\to \infty} b_n = a$が成立する.
 \vspace{\baselineskip}
+
 (M) $\iff$ 下に有界な単調減少数列$(b_n)$が$\inf b_n$に収束する ($\because a_n = -b_n$)
 
 \begin{definition} (コーシー列)
 
     数列$(a_n)$が\textbf{コーシー列}である
     $\stackrel{\mathrm{def}}{\Leftrightarrow}$
-    $\forall \varepsilon>0,\exists N \in \mathbb{N}, n,m \geqq N \implies |a_n-a_m|<\varepsilon$
+    $\forall \varepsilon>0, \exists N \in \mathbb{N}, n, m \geqq N \implies |a_n-a_m|<\varepsilon$
 \end{definition}
 
 \begin{definition} (切断)
 
     全順序集合$K$の空でない部分集合の順序対
     %<が半角になってほしい
-    $<A,B>$が$K=A \cup B,A \cap B = \varnothing; a \in A,b \in B \implies a<b$をみたすとき, $K$の\textbf{切断}という. 切断$<A,B>$に対し論理的に次の四つの可能性がある. 
+    $\langle A, B \rangle$が$K=A \cup B, A \cap B = \varnothing; a \in A, b \in B \implies a<b$をみたすとき, $K$の\textbf{切断}という. 切断$\langle A, B \rangle$に対し論理的に次の四つの可能性がある. 
     \begin{enumerate}
       \item[(I)] $A$の最大元は存在せず, $B$の最小元$b$が存在する.
       \item[(I\hspace{-1.2pt}I)] $A$の最大元$a$が存在し, $B$の最小元は存在しない.
@@ -307,109 +313,105 @@ $\exists \varepsilon >0, B(a,\varepsilon) \subset X$
 \begin{definition} (最大元・最小元)
 
     $a$が$A$の\textbf{最大元}である $\stackrel{\mathrm{def}}{\Leftrightarrow}$
-    $[a \in A]$かつ$[\forall x \in A, x \geqq a]$\\
+    $[a \in A]$かつ$[\forall x \in A, x \leqq a]$\\
     $a$が$A$の\textbf{最小元}である $\stackrel{\mathrm{def}}{\Leftrightarrow}$
-    $[a \in A]$かつ$[\forall x \in A, x \leqq a]$
+    $[a \in A]$かつ$[\forall x \in A, x \geqq a]$
 \end{definition}
   
 (D\textbf{)デデキントの公理}\\
-順序体$K$の任意の切断$<A,B>$が(I)または(I\hspace{-1.2pt}I)の形に限る\\
+順序体$K$の任意の切断$\langle A, B \rangle$が(I)または(I\hspace{-1.2pt}I)の形に限る\\
 実数に置き換えて考えると, \\
-$A \ne \varnothing, B \ne \varnothing, \mathbb{R} = A \cup B, A \cap B = \varnothing; a \in A,b \in B \implies a<b$を満たす部分集合$A,B$において, \\
-$[A$の最大元が存在しない $\iff$ $B$の最小元が存在する$]$が成立する.
-という公理である.
+$A \ne \varnothing, B \ne \varnothing, \mathbb{R} = A \cup B, A \cap B = \varnothing; a \in A, b \in B \implies a<b$を満たす部分集合$A, B$において, \\
+$[A$の最大元が存在しない $\iff$ $B$の最小元が存在する$]$が成立する. 
 \vspace{\baselineskip}
 
 (I)\textbf{中間値の定理}\\
-関数$f:[a,b] \to \mathbb{R}$, $[a,b]$において連続, $f(a)<0, f(b)>0$が成立するとき, $\exists c \in (a,b), f(c)=0$が成立する
+関数$f:[a, b] \to \mathbb{R}$, $[a, b]$において連続, $f(a)<0, f(b)>0$が成立するとき, $\exists c \in (a, b), f(c)=0$が成立する
 \vspace{\baselineskip}
 \begin{proof}((W)$\implies$(M))
 
-  $A \coloneqq \{a_n;n \in \mathbb{N}\}$とすると, $A$は上に有界で空でない集合なので(W)より上限$\sup A$を持つ. 
-  $\sup a_n = \sup A$が成立するので, $\sup a_n$は存在する. あとは, $(a_n)$が$\sup a_n$に収束することを言えばよい. 任意に$\varepsilon >0$をとると, $\sup a_n - \varepsilon < \sup a_n$より, $\exists n_0 \in \mathbb{N},\sup a_n - \varepsilon < a_{n_0}$が成立する. $(a_n)$が単調増加数列であり, $[\forall n \in \mathbb{N},0 \leqq \sup a_n - a_n]$なので$\forall n \geqq n_0, \sup a_n - \varepsilon < a_{n_0} \leqq a_n \implies \sup a_n - a_n < \varepsilon \implies |\sup a_n - a_n| <\varepsilon$が成立する. よって, $(a_n)$は$\sup a_n$に収束するので(M)は成立する.
+  $A \coloneqq \{a_n; n \in \mathbb{N}\}$とすると, $A$は上に有界で空でない集合なので(W)より上限$\sup A$を持つ. 
+  $\sup a_n = \sup A$が成立するので, $\sup a_n$は存在する. あとは, $(a_n)$が$\sup a_n$に収束することを言えばよい. 任意に$\varepsilon >0$をとると$\sup a_n - \varepsilon < \sup a_n$より, $\exists n_0 \in \mathbb{N}, \sup a_n - \varepsilon < a_{n_0}$が成立する. $(a_n)$が単調増加数列であり, $[\forall n \in \mathbb{N}, 0 \leqq \sup a_n - a_n]$なので$\forall n \geqq n_0, \sup a_n - \varepsilon < a_{n_0} \leqq a_n \implies |\sup a_n - a_n| <\varepsilon$が成立する. 数列$(a_n)$は$\sup a_n$に収束するので(M)は成立する.
 \end{proof}
 
 \vspace{\baselineskip}
 \begin{proof}((M) $\implies$ (K)と(A))
   
   (M)$\implies$ (K)を示す. \\
-  任意に(K)の仮定を満たす数列$(a_n),(b_n)$をとる. $\forall n \in \mathbb{N},a_n \leqq b_0,a_0 \leqq b_n$より, 数列$(a_n)$は上に有界な単調増加数列であり, 数列$(b_n)$は下に有界な単調減少数列である. (M)より数列$(a_n)$は$\sup a_n$に収束し,数列$(b_n)$は$\inf b_n$に収束する. (K)の仮定$\lim_{n\to \infty} (a_n - b_n) = 0$より, $\sup a_n = \inf b_n$が成立する. $a = \sup a_n = \inf b_n$とすると, 
+  任意に(K)の仮定を満たす数列$(a_n), (b_n)$をとる. $\forall n \in \mathbb{N}, a_n \leqq b_0,a_0 \leqq b_n$より, 数列$(a_n)$は上に有界な単調増加数列であり, 数列$(b_n)$は下に有界な単調減少数列である. (M)より数列$(a_n)$は$\sup a_n$に収束し, 数列$(b_n)$は$\inf b_n$に収束する. (K)の仮定$\lim_{n\to \infty} (a_n - b_n) = 0$より, $\sup a_n = \inf b_n$が成立する. $a = \sup a_n = \inf b_n$とすると, 
   $\forall n \in \mathbb{N}, a_n \leqq a \leqq b_n$より, $\{a\} \subset \cap_{n \in \mathbb{N}}I_n$が成立する. 
-  もし$\exists x \in \mathbb{R}, x \ne a, x \in \cap_{n \in \mathbb{N}}I_n$のとき, $x<a$であれば, $a=\sup a_n$であることに矛盾する. $x>a$であれば, $a=\inf b_n$であることに矛盾する. $\exists a \in \mathbb{R},\cap_{n \in \mathbb{N}}I_n = \{a\}$が成立し, 数列$(a_n),(b_n)$は$a$に収束するので(K)は成立する. 
+  もし$\exists x \in \mathbb{R}, x \ne a, x \in \cap_{n \in \mathbb{N}}I_n$のとき, $x<a$であれば, $a=\sup a_n$であることに矛盾する. $x>a$であれば, $a=\inf b_n$であることに矛盾する. よって$\exists a \in \mathbb{R}, \cap_{n \in \mathbb{N}}I_n = \{a\}$が成立し, 数列$(a_n), (b_n)$は$a$に収束するので(K)は成立する. 
 
   (M)$\implies$ (A)を示す. \\
-  (A)が成立しないとすると, $\exists x \in \mathbb{R}, \forall n \in \mathbb{N}, x \geqq n$が成立する. $a_n = n$とすると, $(a_n)$は上に有界な単調増加数列なので(M)より$\sup a_n$に収束する. $\sup a_n -1 < \sup a_n$より$[\exists n_0 \in \mathbb{N}, \sup a_n -1 < n_0 ] \implies [\exists n_0 +1 \in \mathbb{N},\sup a_n < n_0+1]$が成立する. これは$\sup a_n$が数列$(a_n)$の上限であることに矛盾する. よって(A)は成立する.
+  (A)が成立しないとすると, $\exists x \in \mathbb{R}, \forall n \in \mathbb{N}, x \geqq n$が成立する. $a_n = n$とすると, $(a_n)$は上に有界な単調増加数列なので(M)より$\sup a_n$に収束する. $\sup a_n -1 < \sup a_n$より$\exists n_0 \in \mathbb{N}, \sup a_n -1 < n_0 $であり, $ \exists n_0 +1 \in \mathbb{N}, \sup a_n < n_0+1$が成立する. これは$\sup a_n$が数列$(a_n)$の上限であることに矛盾する. よって(A)は成立する.
 \end{proof}
 \vspace{\baselineskip}
 \begin{proof} ((K)と(A) $\implies$ (B-W))
 
-  有界数列$(a_n)$は有界であるので, $\exists b,c \in \mathbb{R}, \forall n \in \mathbb{N}, b \leqq a_n \leqq c$が成立する. $I=[b,c]$とすると,$\forall n \in \mathbb{N},a_n \in I$が成立するので, $I$は無限に多くの$n\in \mathbb{N}$に対する$a_n$を含む. $b_0 = b,c_0 = c,I_0 = I$とする.\\
-  $b_n,c_n,I_n$まで定まったとき$\forall n \in \mathbb{N},I_n =[b_n,c_n]$とし, $I_n$が無限に多くの$n\in \mathbb{N}$に対する$a_n$を含むとき, $d_n=(b_n+c_n)/2$とする. 
-  閉区間$[b_n,d_n]$が無限に多くの$n\in \mathbb{N}$に対する$a_n$を含むとき$I_{n+1}=[b_n,d_n],b_{n+1}=b_n,c_{n+1}=d_n$とし, 含まないとき$I_{n+1} = [d_n,c_n],b_{n+1}=d_n,c_{n+1}=c_n$とする. このように構成すると, $I_n$は無限に多くの$n\in \mathbb{N}$に対する$a_n$を含むので$I_{n+1}$も無限に多くの$n\in \mathbb{N}$に対する$a_n$を含む. このようにすれば$\forall n \in \mathbb{N}$において$I_n$が定義できる.\\
-  $\forall n \in \mathbb{N} \setminus \{0\}, 0 \leqq c_n-b_n=(c_0-b_0)/2^n = (c-b)/2^n < (c-b)/n$が成立する. (A)より$\lim_{n\to \infty} (c-b)/n = 0$が成立する. はさみうちの原理より数列$(c_n-b_n)$は0に収束する. 数列$(b_n),(c_n)$, 閉区間$I_n$は(K)の仮定を満たすので, $\exists a \in \mathbb{R},\cap_{n \in \mathbb{N}}I_n = \{a\}$が成立する. \\
-  $\forall n \in \mathbb{N},a_m \in I_n$が成立する$m \in \mathbb{N}$は無限に存在する. $m_0$を$a_{m_0} \in I_0$となる最小の$m_0 \in \mathbb{N}$とする. 
-  $\forall n \in \mathbb{N}, m_{n+1}$を$m_n < m_{n+1}, a_{m_{n+1}} \in I_{n+1}$となるように選ぶことが出来る. $\forall n \in \mathbb{N},b_n \leqq a_{m_n} \leqq c_n$が成立するので, はさみうちの原理より$(a_n)$の部分列$(a_{m_n})$は$a$に収束する. よって(B-W)は成立する. 
+  有界数列$(a_n)$は有界であるので, $\exists b, c \in \mathbb{R}, \forall n \in \mathbb{N}, b \leqq a_n \leqq c$が成立する. $I=[b, c]$とすると, $\forall n \in \mathbb{N}, a_n \in I$が成立するので, $I$は無限に多くの$n\in \mathbb{N}$に対する$a_n$を含む. $b_0 = b, c_0 = c, I_0 = I$とする.\\
+  $b_n, c_n, I_n$まで定まり$I_n$が無限に多くの$n\in \mathbb{N}$に対する$a_n$を含むとき, $d_n=(b_n+c_n)/2$とする. 
+  閉区間$[b_n, d_n]$が無限に多くの$n\in \mathbb{N}$に対する$a_n$を含むとき$I_{n+1}=[b_n,d_n], b_{n+1}=b_n, c_{n+1}=d_n$とし, 含まないとき$I_{n+1} = [d_n, c_n], b_{n+1}=d_n, c_{n+1}=c_n$とする. このように構成すると, $I_n$は無限に多くの$n\in \mathbb{N}$に対する$a_n$を含むので$I_{n+1}$も無限に多くの$n\in \mathbb{N}$に対する$a_n$を含む. このようにすれば$\forall n \in \mathbb{N}$において$I_n$が定義できる.\\
+  $\forall n \in \mathbb{N} \setminus \{0\}, 0 \leqq c_n-b_n=(c_0-b_0)/2^n = (c-b)/2^n < (c-b)/n$が成立する. (A)より$\lim_{n\to \infty} (c-b)/n = 0$が成立する. よって, はさみうちの原理より$\lim_{n\to \infty} c_n-b_n = 0$が成立する. 数列$(b_n), (c_n)$, 閉区間$I_n$は(K)の仮定を満たすので, $\exists a \in \mathbb{R}, \cap_{n \in \mathbb{N}}I_n = \{a\}$が成立する. \\
+  $\forall n \in \mathbb{N}$において, $a_m \in I_n$が成立する$m \in \mathbb{N}$は無限に存在する. よって$\forall n \in \mathbb{N}$において, $m_n$を$a_{m_n} \in I_n$となるように選ぶことが出来る. $\forall n \in \mathbb{N}, b_n \leqq a_{m_n} \leqq c_n$が成立するので, はさみうちの原理より$(a_n)$の部分列$(a_{m_n})$は$a$に収束する. よって(B-W)は成立する. 
 \end{proof}
 \vspace{\baselineskip}
 \begin{proof} ((B-W) $\implies$ (C)と(A))
 
   (B-W)$\implies$(C)を示す. \\
-  任意にコーシー列$(a_n)$をとる.数列$(a_n)$はコーシー列なので, $\exists N \in \mathbb{N},n \geqq N \implies |a_n-a_N|<1 \iff a_N -1 < a_n < a_N +1$が成立し, $0 \leqq n \leqq N$は有限個なので, 数列$(a_n)$は有界である. 数列$(a_n)$(B-W)の仮定を満たすので, 収束部分列$(a_{m_n})$が存在する. 
+  任意にコーシー列$(a_n)$をとる. 数列$(a_n)$はコーシー列なので, $\exists N \in \mathbb{N}, n \geqq N \implies |a_n-a_N|<1 \iff a_N -1 < a_n < a_N +1$が成立し, $0 \leqq n \leqq N$は有限個なので, 数列$(a_n)$は有界である. 数列$(a_n)$は(B-W)の仮定を満たすので, 収束部分列$(a_{m_n})$が存在する. 
   任意に$\varepsilon>0$をとる. 
-  数列$(a_n)$はコーシー列なので, $\exists n_0 \in \mathbb{N}, n,m \geqq n_0 \implies |a_n - a_m| < \varepsilon/2$が成立. 
+  数列$(a_n)$はコーシー列なので, $\exists n_0 \in \mathbb{N}, n, m \geqq n_0 \implies |a_n - a_m| < \varepsilon/2$が成立. 
   数列$(a_{m_n})$が$a$に収束するとき, 
-  $\exists n_1 \in \mathbb{N},m_{n_1} \geqq n_0, |a_{m_{n_1}} - a| < \varepsilon/2$が成立する. よって, $|a_n - a| \leqq |a_n - a_{m_{n_1}}|+|a_{m_{n_1}} - a| < \varepsilon$が成立するのでコーシー列$(a_n)$は収束するので(C)は成立する. 
+  $\exists n_1 \in \mathbb{N}, m_{n_1} \geqq n_0, |a_{m_{n_1}} - a| < \varepsilon/2$が成立する. よって, $|a_n - a| \leqq |a_n - a_{m_{n_1}}|+|a_{m_{n_1}} - a| < \varepsilon$が成立するのでコーシー列$(a_n)$は収束するので(C)は成立する. 
 
   (B-W) $\implies$ (A)を示す. \\
-  (A)が成立しないとすると, $\exists x \in \mathbb{R}, \forall n \in \mathbb{N}, x \geqq n$が成立する. $a_n = n$とすると, 数列$(a_n)$は有界となり(B-W)の仮定を満たすので収束部分列$(a_{m_n})$をもつ. 数列$(a_n)$が$a$に収束するとき, $\exists N \in \mathbb{N},n \geqq N \implies |a_{m_n} - a|<1/2$が成立するので, $1 \leqq |a_{m_{N+1}} - a_{m_N}| \leqq |a_{m_{N+1}} - a| + |a_{m_N} - a| < 1$となり矛盾する. よって(A)は成立する. 
+  (A)が成立しないとすると, $\exists x \in \mathbb{R}, \forall n \in \mathbb{N}, x \geqq n$が成立する. $a_n = n$とすると, 数列$(a_n)$は有界となり(B-W)の仮定を満たすので収束部分列$(a_{m_n})$をもつ. 数列$(a_n)$が$a$に収束するとき, $\exists N \in \mathbb{N}, n \geqq N \implies |a_{m_n} - a|<1/2$が成立するので, $1 \leqq |a_{m_{N+1}} - a_{m_N}| \leqq |a_{m_{N+1}} - a| + |a_{m_N} - a| < 1$となり矛盾する. よって(A)は成立する. 
 \end{proof}
 \vspace{\baselineskip}
 \begin{proof} ((C)と(A)$\implies$ (W))
 
-  任意に$\mathbb{R}$の上に有界な集合$A \ne \varnothing$をとる. $B=\{ x \in \mathbb{R}; \forall a \in A, a \leqq x\},C=\mathbb{R} \setminus B$とする. $A$は上に有界なので, $B \ne \varnothing$かつ, $\forall a \in A \ne \varnothing,a-1 \in C$より$C \ne \varnothing$. $\forall c \in C, \exists a \in A, c<a$かつ, $\forall b \in B, a<b$より, $\forall b \in B, \forall c \in C, \exists a \in A, c < a \leqq b$が成立する. 
+  任意に$\mathbb{R}$の上に有界な集合$A \ne \varnothing$をとる. $B=\{ x \in \mathbb{R}; \forall a \in A, a \leqq x\}, C=\mathbb{R} \setminus B$とする. $A$は上に有界なので, $B \ne \varnothing$かつ, $\forall a \in A \ne \varnothing, a-1 \in C$より$C \ne \varnothing$. $\forall c \in C, \exists a \in A, c<a$かつ, $\forall b \in B, a \leqq b$より, $\forall b \in B, \forall c \in C, \exists a \in A, c < a \leqq b$が成立する. 
 
-  任意に$b_0 \in B,c_0 \in C$をとる. 
-  $b_n,c_n$まで定まったとき$d_n=(b_n+c_n)/2$とすると, $d_n \in \mathbb{R}=B \cup C, B \cap C=\varnothing$より, %実数においての和の定義により実数と実数の和が実数になることは言った方がいい？
-  $d_n \in B$または$d_n \in C$のどちらかである. $d_n \in B$のとき, $b_{n+1} = d_n,c_{n+1} = c_n$,$d_n \in C$のとき, $b_{n+1} = b_n,c_{n+1} = d_n$と定める. 
-  このように$(b_n),(c_n)$を帰納的に定めると, $\forall n \in \mathbb{N},c_n \leqq d_n \leqq b_n$より, $(c_n)$は単調増加, $(b_n)$は単調減少となる. 
-  $\forall n \in \mathbb{N}\setminus \{0\}, 0 \leqq |b_n-c_n|=b_n-c_n=(b_0-c_0)/2^n < (b_0-c_0)/n$が成立する. (A)より$\lim_{n\to \infty} (b_0-c_0)/n = 0$が成立する. はさみうちの原理より$\lim_{n\to \infty} (|b_n-c_n|) = 0$が成立する. $\forall \varepsilon>0, \exists N \in \mathbb{N}, |b_N-c_N|<\varepsilon$が成立し, $\forall q \geqq \forall p \geqq N, c_0 \leqq \cdots \leqq c_N \leqq \cdots \leqq c_p \leqq \cdots \leqq c_q < b_q \leqq \cdots \leqq b_p\leqq \cdots \leqq b_N\leqq \cdots \leqq b_0$より$|c_p-c_q|,|b_p-b_q| \leqq |b_N-c_N| < \varepsilon$が成立する. よって$(b_n),(c_n)$はコーシー列である. (C)かつ$\lim_{n\to \infty} |b_n-c_n| = 0$より, $\lim_{n\to \infty} b_n =  b$とすると, $\lim_{n\to \infty} c_n = b$が成立する. 
+  任意に$b_0 \in B, c_0 \in C$をとる. 
+  $b_n, c_n$まで定まったとき$d_n=(b_n+c_n)/2$とすると, $d_n \in \mathbb{R}=B \cup C, B \cap C=\varnothing$より, $d_n \in B$または$d_n \in C$のどちらかである. $d_n \in B$のとき, $b_{n+1} = d_n, c_{n+1} = c_n$, $d_n \in C$のとき, $b_{n+1} = b_n, c_{n+1} = d_n$と定める. 
+  このように$(b_n), (c_n)$を帰納的に定めると, $\forall n \in \mathbb{N}, c_n \leqq d_n \leqq b_n$より, $(c_n)$は単調増加数列, $(b_n)$は単調減少数列となる. 
+  $\forall n \in \mathbb{N}\setminus \{0\}, 0 \leqq |b_n-c_n|=b_n-c_n=(b_0-c_0)/2^n < (b_0-c_0)/n$が成立する. (A)より$\lim_{n\to \infty} (b_0-c_0)/n = 0$が成立する. はさみうちの原理より$\lim_{n\to \infty} (|b_n-c_n|) = 0$が成立する. $\forall \varepsilon>0, \exists N \in \mathbb{N}, |b_N-c_N|<\varepsilon$が成立し, $\forall q \geqq \forall p \geqq N, c_0 \leqq \cdots \leqq c_N \leqq \cdots \leqq c_p \leqq \cdots \leqq c_q < b_q \leqq \cdots \leqq b_p\leqq \cdots \leqq b_N\leqq \cdots \leqq b_0$より$|c_p-c_q|, |b_p-b_q| \leqq |b_N-c_N| < \varepsilon$が成立する. よって数列$(b_n), (c_n)$はコーシー列である. (C)かつ$\lim_{n\to \infty} |b_n-c_n| = 0$より, $\lim_{n\to \infty} b_n =  b$とすると, $\lim_{n\to \infty} c_n = b$が成立する. 
 
-  あとは$b$が$A$の上限であることを言えばよい. $B$の定義より, $\forall a \in A,\forall n \in \mathbb{N},a \leqq b_n$が成立する. $\lim_{n\to \infty} b_n =  b$かつはさみうちの原理より, $\forall a \in A, a \leqq b$が成立する. $\exists N \in \mathbb{N},b<c_N$と仮定すると, $(c_n)$は単調増加なので, $n \geqq N \implies 0 < (c_N-b) \leqq (c_n-b)$が成立する. これは$\lim_{n\to \infty} c_n = b$に矛盾するので, $\forall n \in \mathbb{N}, c_n \leqq b$が成立する. 任意に$x<b$をとる. $b-x>0$より, $\exists N \in \mathbb{N}, |c_N - b| = b - c_N < b-x \implies x<c_N$が成立する. $\forall n \in \mathbb{N}, \exists a \in A, c_n < a \leqq b$より, $\forall x < b,\exists a \in A,x<a$が成立するので$b$は$A$の上限である. よって(W)は成立する.
+  あとは$b$が$A$の上限であることを言えばよい. $B$の定義より, $\forall a \in A, \forall n \in \mathbb{N}, a \leqq b_n$が成立する. $\lim_{n\to \infty} b_n =  b$かつはさみうちの原理より, $\forall a \in A, a \leqq b$が成立する. $\exists N \in \mathbb{N}, b<c_N$と仮定すると, $(c_n)$は単調増加数列なので, $n \geqq N \implies 0 < (c_N-b) \leqq (c_n-b)$が成立する. これは$\lim_{n\to \infty} c_n = b$に矛盾するので, $\forall n \in \mathbb{N}, c_n \leqq b$が成立する. 任意に$x<b$をとる. $b-x>0$より, $\exists N \in \mathbb{N}, |c_N - b| = b - c_N < b-x \implies x<c_N$が成立する. $\forall n \in \mathbb{N}, \exists a \in A, c_n < a \leqq b$より, $\forall x < b, \exists a \in A, x<a$が成立するので$b$は$A$の上限である. よって(W)は成立する.
   
 \end{proof}
 \vspace{\baselineskip}
 \begin{proof}((D) $\implies$ (W))
 
-  任意に$\mathbb{R}$の上に有界な集合$A \ne \varnothing$をとる. $B=\{ x \in \mathbb{R}; \forall a \in A, a \leqq x\},C=\mathbb{R} \setminus B$とする. $A$は上に有界なので, $B \ne \varnothing$かつ, $\forall a \in A \ne \varnothing,a-1 \in C$より$C \ne \varnothing$.$\forall c \in C, \exists a \in A, c<a$かつ, $\forall b \in B, a<b$より, $\forall b \in B, \forall c \in C, \exists a \in A, c < a \leqq b$が成立.
+  任意に$\mathbb{R}$の上に有界な集合$A \ne \varnothing$をとる. $B=\{ x \in \mathbb{R}; \forall a \in A, a \leqq x\}, C=\mathbb{R} \setminus B$とする. $A$は上に有界なので, $B \ne \varnothing$かつ, $\forall a \in A \ne \varnothing, a-1 \in C$より$C \ne \varnothing$. $\forall c \in C, \exists a \in A, c<a$かつ, $\forall b \in B, a \leqq b$より, $\forall b \in B, \forall c \in C, \exists a \in A, c < a \leqq b$が成立.
   $C$の最大元$c$が存在するとき, $\exists a \in A, c < a$が成立する. $c < (c+a)/2 < a$より, $(c+a)/2 \in C$となるので$c$が$C$の最大元であることに矛盾する.
-  $<C,B>$は$\mathbb{R}$の切断となっているかつ, $C$は最大元をもたないので, (D)より$B$の最小元$b$が存在する. $[\forall a \in A, a \leqq b]かつ[\forall x < b,x \in C, \exists a\in A,x<a]$が成立するので, $b$は$A$の上限となっている.よって(W)は成立する. 
+  $\langle C, B \rangle$は$\mathbb{R}$の切断となっているかつ, $C$は最大元をもたないので(D)より$B$の最小元$b$が存在する. $[\forall a \in A, a \leqq b]かつ[\forall x < b, x \in C, \exists a\in A, x<a]$が成立するので, $b$は$A$の上限となっている.よって(W)は成立する. 
+  
 \end{proof}
 \vspace{\baselineskip}
 \begin{proof} ((W) $\implies$ (D))
 
-  任意に実数の切断$<A,B>$をとる. $B \ne \varnothing$より, $\exists b \in B, \forall a \in A, a<b$が成立するので, $A \ne \varnothing$は上に有界である. 
-  (W)より$A$の上限$a_0$が存在する. $a_0$は$A$の上限なので$\forall a \in A, a \leqq a_0$が成立する. もし$\exists b \in B, b < a_0$のとき, $\forall a \in A,a<b$より$a_0$が$A$の上限であることに矛盾する. よって$\forall b \in B, a_0 \leqq B$が成立する.
-  (W)より$B$の下限$b_0$が存在する. $A$の上限$a_0$と同様に$\forall a \in A, \forall b \in B, a \leqq b_0 \leqq b$が成立するので%丁寧に書いた方がいい？
-  $\forall a \in A, \forall b \in B, a \leqq a_0 \leqq b, a \leqq b_0 \leqq b$が成立する. $a_0 \ne b_0$のとき, $\forall a \in A, 
- \forall b \in B, a < (a_0+b_0)/2 < b$が成立し, $(a_0+b_0)/2 \notin A$かつ$(a_0+b_0)/2 \notin B$となり$(a_0+b_0)/2 \in \mathbb{R}$に矛盾する. よって$a_0 = b_0$である. $[A$に最大元が存在しない $\iff a_0 \notin A \iff a_0 \in B \iff$ $B$に最小元が存在する$]$より(D)は成立する.
+  任意に実数の切断$\langle A, B \rangle$をとる. $B \ne \varnothing$より, $\exists b \in B, \forall a \in A, a<b$が成立するので, $A \ne \varnothing$は上に有界である. 
+  (W)より$A$の上限$a_0$が存在する. $a_0$は$A$の上限なので$\forall a \in A, a \leqq a_0$が成立する. もし$\exists b \in B, b < a_0$のとき, $\forall a \in A, a<b$より$a_0$が$A$の上限であることに矛盾する. よって$\forall b \in B, a_0 \leqq b$が成立する.
+  (W)より$B$の下限$b_0$が存在する. $A$の上限$a_0$と同様に$\forall a \in A, \forall b \in B, a \leqq b_0 \leqq b$が成立するので$\forall a \in A, \forall b \in B, a \leqq a_0 \leqq b, a \leqq b_0 \leqq b$が成立する. $a_0 \ne b_0$のとき, $\forall a \in A, \forall b \in B, a < (a_0+b_0)/2 < b$が成立し, $(a_0+b_0)/2 \notin A$かつ$(a_0+b_0)/2 \notin B$となり$(a_0+b_0)/2 \in \mathbb{R}$に矛盾する. よって$a_0 = b_0$である. $[A$に最大元が存在しない $\iff a_0 \notin A \iff a_0 \in B \iff$ $B$に最小元が存在する$]$より(D)は成立する. 
 \end{proof}
 \vspace{\baselineskip}
 
 \begin{proof} ((K)と(A) $\implies$ (I))
 
-  $a_0=a,b_0=b$とすると仮定より, $f(a_0)<0,f(b_0)>0$が成立する. $a_n,b_n$まで定まり, $a_0 \leqq a_n \leqq b_n \leqq b_0, f(a_n)<0,f(b_n)>0$が成立するとする. $c_n=(a_n+b_n)/2$とすると, $f(c_n)=0$のとき$c_n \in (a_n,b_n)$より中間値の定理が成立する. $f(c_n)<0$のとき, $a_{n+1}=c_n, b_{n+1}=b_n$とする. $f(c_n)>0$のとき, $a_{n+1}=a_n, b_{n+1}=c_n$とする. このように定義すると, $a_0 \leqq a_{n+1} \leqq b_{n+1} \leqq b_0, f(a_{n+1})<0,f(b_{n+1})>0$が成立する. もし無限に多くの$n \in \mathbb{N}$に対する$a_n,b_n$が定義されたら,数列$|a_n-b_n| = (b_n-a_n) = (b_0-a_0)/2^n < (b_0-a_0)/n$が成立する. (A)より$\lim_{n\to \infty} (b_0-a_0)/n = 0$が成立する. はさみうちの原理より$\lim_{n\to \infty} |b_n-a_n| = 0$は成立する. (K)より$\exists c \in [a_0,b_0], \lim_{n\to \infty} a_n = \lim_{n\to \infty} b_n = c$が成立し, $f$は$c$においても連続なので, $\forall \varepsilon >0, \exists \delta >0, \exists N \in \mathbb{N}, n \geqq N \implies |a_n-c| < \delta \implies |f(a_n)-f(c)|< \varepsilon $よって$\lim_{n\to \infty} f(a_n) = f(c)$が成立する. 同様に$\lim_{n\to \infty} f(b_n) = f(c)$も成立するので, $f(c) \leqq 0$かつ$f(c) \geqq 0$が成立する. $f(c)=0$より(I)は成立する. 
+  $a_0=a, b_0=b$とすると仮定より, $f(a_0)<0,f(b_0)>0$が成立する. $a_n, b_n$まで定まり, $a_0 \leqq a_n \leqq b_n \leqq b_0, f(a_n)<0, f(b_n)>0$が成立するとする. $c_n=(a_n+b_n)/2$とすると, $f(c_n)=0$のとき$c_n \in (a_n, b_n)$より中間値の定理が成立する. $f(c_n)<0$のとき, $a_{n+1}=c_n, b_{n+1}=b_n$とする. $f(c_n)>0$のとき, $a_{n+1}=a_n, b_{n+1}=c_n$とする. このように定義すると, $a_0 \leqq a_{n+1} \leqq b_{n+1} \leqq b_0, f(a_{n+1})<0, f(b_{n+1})>0$が成立する. もし無限に多くの$n \in \mathbb{N}$に対する$a_n, b_n$が定義されたとき, $\forall n \in \mathbb{N} \setminus \{0\}, |a_n-b_n| = b_n-a_n = (b_0-a_0)/2^n < (b_0-a_0)/n$が成立する. (A)より$\lim_{n\to \infty} (b_0-a_0)/n = 0$が成立する. はさみうちの原理より$\lim_{n\to \infty} |a_n-b_n| = 0$が成立する. (K)より$\exists c \in [a_0, b_0], \lim_{n\to \infty} a_n = \lim_{n\to \infty} b_n = c$が成立し, $f$は$c$においても連続なので, $\forall \varepsilon >0, \exists \delta >0, \exists N \in \mathbb{N}, n \geqq N \implies |a_n-c| < \delta \implies |f(a_n)-f(c)|< \varepsilon $よって$\lim_{n\to \infty} f(a_n) = f(c)$が成立する. 同様に$\lim_{n\to \infty} f(b_n) = f(c)$も成立するので, $f(c) \leqq 0$かつ$f(c) \geqq 0$が成立する. $f(c)=0$より(I)は成立する. 
 \end{proof}
 \vspace{\baselineskip}
 \begin{proof} ((I) $\implies$ (D))
 
-  任意に実数の切断$<A,B>$をとる. もし[(I\hspace{-1.2pt}V)$A$の最大元$a_0$, $B$の最小元$b_0$が共に存在する] が成立するとき, $ A \cap B = \varnothing$より$a_0 \ne b_0$が成立する. $\forall a \in A, \forall b \in B, a \leqq a_0 < (a_0+b_0)/2 < b_0 \leqq b$より, 
-  $(a_0+b_0)/2 \notin A$かつ$(a_0+b_0)/2 \notin B$となり$(a_0+b_0)/2 \in \mathbb{R}$に矛盾する. 
-  もし[(I\hspace{-1.2pt}I\hspace{-1.2pt}I)$A$の最大元, $B$の最小元は共に存在しない] が成立するとき, 任意に$a_0 \in A, b_0 \in B$をとる. 関数$f:[a_0,b_0] \to \mathbb{R},f(x)$は$x \in A$のとき$-1$, $x \in B$のとき$1$とする. このとき$f$は$[a_0,b_0]$上の連続関数, すなわち$\forall x \in [a_0,b_0]$に対して連続となる. なぜなら, 任意に$\varepsilon>0$をとると, $x \in A$のとき$A$には最大元が存在しないので$\exists a_1 \in A, x<a_1$が成立する. $a_1-x=\delta >0$とすると, $y \in (x-\delta, x+\delta) \cap [a_0,b_0] \implies y < a_1 \implies y \in A \implies |f(x)-f(y)|=|(-1)-(-1)|=0 < \varepsilon$が成立する. $x \in B$のときも同様に$\exists \delta>0, y \in (x-\delta,x+\delta) \cap [a_0,b_0] \implies y \in B \implies |f(x)-f(y)|=|1-1|=0 < \varepsilon$が成立する. (I)より$\exists c \in [a_0,b_0], f(c)=0$が成立するが$f$の定義より$f(c)=0$を満たす$c$は存在しないので矛盾する. よって[(I)$A$の最大元は存在せず, $B$の最小元$b$が存在する]または, [(I\hspace{-1.2pt}I)$A$の最大元$a$が存在し, $B$の最小元は存在しない]のどちらかとなるので(D)は成立する. 
+  任意に実数の切断$\langle A, B \rangle$をとる. もし[(I\hspace{-1.2pt}V)$A$の最大元$a_0$, $B$の最小元$b_0$が共に存在する] が成立するとき, $ A \cap B = \varnothing$より$a_0 \ne b_0$が成立する. 
+  $a_0<b_0$のとき$\forall a \in A, \forall b \in B, a \leqq a_0 < (a_0+b_0)/2 < b_0 \leqq b$より, $(a_0+b_0)/2 \notin A$かつ$(a_0+b_0)/2 \notin B$となり$(a_0+b_0)/2 \in \mathbb{R}$に矛盾する. 
+  $a_0>b_0$のとき$b_0 \in B$より, $a_0 \in A$かつ$\forall a \in A, a \leqq b_0$に矛盾する. よって(I\hspace{-1.2pt}V)は成立しない. 
+  もし[(I\hspace{-1.2pt}I\hspace{-1.2pt}I)$A$の最大元, $B$の最小元は共に存在しない] が成立するとき, 任意に$a_0 \in A, b_0 \in B$をとる. 関数$f:[a_0, b_0] \to \mathbb{R}, f(x)$は$x \in A$のとき$-1$, $x \in B$のとき$1$とする. このとき$f$は$[a_0, b_0]$上の連続関数, すなわち$\forall x \in [a_0, b_0]$に対して連続となる. なぜなら, 任意に$\varepsilon>0$をとると, $x \in A$のとき$A$には最大元が存在しないので$\exists a_1 \in A, x<a_1$が成立する. $a_1-x=\delta >0$とすると, $y \in (x-\delta, x+\delta) \cap [a_0, b_0] \implies y < a_1 \implies y \in A \implies |f(x)-f(y)|=|(-1)-(-1)|=0 < \varepsilon$が成立する. $x \in B$のときも同様に$\exists \delta>0, y \in (x-\delta,x+\delta) \cap [a_0, b_0] \implies y \in B \implies |f(x)-f(y)|=|1-1|=0 < \varepsilon$が成立する. (I)より$\exists c \in [a_0, b_0], f(c)=0$が成立するが$f$の定義より$f(c)=0$を満たす$c$は存在しないので(I\hspace{-1.2pt}I\hspace{-1.2pt}I)は成立しない. よって[(I)$A$の最大元は存在せず, $B$の最小元$b$が存在する]または, [(I\hspace{-1.2pt}I)$A$の最大元$a$が存在し, $B$の最小元は存在しない]のどちらかとなるので(D)は成立する. 
 \end{proof}
 
 \section{さいごに}
-いかがでしたか？様々な表現がありましたね. 写像の連続性においては, ユークリッド空間だけでなく, 距離空間であれば成立します. そのうえ集合が開集合や閉集合であるかだけで, 点の移動だと考えている写像の連続性の定義と同値な表現が出来ます. 実数の連続性においては, こんなにも多くの表現方法があります. 高校の範囲でもある中間値の定理も連続性の公理になりえます. 
-繋がると思っていなかったものが繋がっていたことに感動しています. これからも数学の面白さを享受していこうと思います. では. 
+いかがでしたか？様々な表現がありましたね. 写像の連続性においては, ユークリッド空間だけでなく距離空間であれば成立します. そのうえ集合が開集合や閉集合であるかだけで, 写像の連続性の定義と同値な表現が出来ます. 実数の連続性においては, こんなにも多くの表現があります. 高校の範囲である中間値の定理も連続性の公理になりえます. 繋がると思っていなかったものが繋がっていたことにとても感動しています. これからも数学の面白さを享受していこうと思います. では. 
 
 \begin{thebibliography}{10}
  \bibitem{um}
@@ -417,7 +419,7 @@ $[A$の最大元が存在しない $\iff$ $B$の最小元が存在する$]$が�
  \bibitem{sugi}
  \newblock 杉原光夫, 解析入門I, 東京大学出版会, 1980
  \bibitem{ta}
- \newblock 高木貞治, 解析概論, 岩波書店, 2004
+ \newblock 朝平映一, 実数の連続性の公理と同値な性質, イプシロン, 2015, 巻57, p.163-166
 \end{thebibliography}
 
 
